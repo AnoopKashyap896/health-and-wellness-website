@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3 column layout webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SIT774 Team">
+    <meta name="description" content="3 column design">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar sticky-top navbar-expand-lg bg-aqua navbar-light p-2">
+        <div class="container-fluid">
+            <div class="navbar-brand d-flex align-items-center col-3">
+                <a href="/">
+                    <img src="logo.JPG" alt="Logo" class="img-fluid" style="max-height: 80px; width: auto;">
+                </a>
+                <a class="navbar-brand ms-2" href="#"
+                    style="font-family: 'Lobster', cursive; font-size: 2.5rem; color: #153838;">
+                    Harmony Wellness
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex align-items-center">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="max-width: 400px;">
+                    <button class="btn btn-primary me-2" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="div-darker-background p-4">
+        <h1>Contact Us</h1>
+        <br>
+        <div>
+            <div class="row lg-background p-4">
+                <!-- Column 1 -->
+                <div class="col-3 text-dark p-4">
+                    <ul class="list-unstyled">
+                        <li class="contact-item" id="phone" data-value="123-456-7890">
+                            <strong>Phone:</strong> 123-456-7890
+                        </li>
+                        <li class="contact-item" id="email" data-value="info@Harmony Wellness.com">
+                            <strong>Email:</strong> info@HarmonyWellness.com
+                        </li>
+                        <li class="contact-item">
+                            <strong>Address:</strong> 123 Wellness Street, Harmony City, HC 54321
+                        </li>
+                    </ul>
+                    <div class="col-12 mt-4">
+                        <h4>Find Us Here</h4>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509364!2d144.96315791531675!3d-37.8162797427551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5770c0412e5cf70!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1619183746952!5m2!1sen!2sau"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-6 text-black p-4">
+                    <h2 class="text-center">Frequently Asked Questions (FAQs)</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Question 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                                    What services does Harmony Wellness offer?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Harmony Wellness offers a range of services, including yoga (e.g., Goat Yoga, Power
+                                    Yoga, Aerial Yoga), meditation sessions, personal training, nutrition guidance, and
+                                    fitness classes like aerobics and Pilates.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    How can I book a class or consultation?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    You can book a class or consultation by clicking on the "Book Now" button available
+                                    on
+                                    the service pages. A form will open where you can fill in your details and confirm
+                                    your
+                                    booking.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    Are your yoga classes suitable for beginners?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Absolutely! Our yoga classes cater to all skill levels, including beginners. Our
+                                    experienced instructors will guide you through poses and techniques at a comfortable
+                                    pace.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                    Do you offer online classes?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Yes, we offer online classes for yoga, meditation, and fitness sessions. You can
+                                    join
+                                    from the comfort of your home via a link provided upon booking.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                    What is the cancellation policy for booked sessions?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    You can cancel your session up to 24 hours before the scheduled time to receive a
+                                    full
+                                    refund. For cancellations within 24 hours, please contact our support team for
+                                    assistance.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                                    Are the instructors certified?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Yes, all our instructors are highly trained and certified in their respective
+                                    fields,
+                                    ensuring a safe and professional experience for all participants.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                                    Can I join a class mid-session?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Depending on availability, you may join a class mid-session. However, we recommend
+                                    joining at the start to maximize your experience.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+                                    Do you have any free trial classes?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Yes, we offer a free trial class for most of our services. Contact our support team
+                                    or
+                                    visit our services page to learn more and register.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 9 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
+                                    What should I bring to a yoga or fitness class?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Please bring a yoga mat, a water bottle, and a towel. Comfortable, breathable
+                                    clothing
+                                    is also recommended for your sessions.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 10 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
+                                    Are your facilities wheelchair accessible?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-dark">
+                                    Yes, our facilities are fully wheelchair accessible, ensuring a welcoming
+                                    environment
+                                    for everyone.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-12 text-black p-2">
+                            <h2>Reach us out:</h2>
+                            <form id="contactForm" onsubmit="validateContactForm(event); return false">
+                                <div class="row mb-3 align-items-center">
+                                    <label for="fname" class="col-md-2 col-form-label">First Name</label>
+                                    <div class="col-md-10">
+                                        <input type="text" id="fname" class="form-control"
+                                            placeholder="Enter your first name">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <small id="fnameMsg" class="form-text"></small>
+                                    </div>
+                                </div>
+
+                                <!-- Last Name Field -->
+                                <div class="row mb-3 align-items-center">
+                                    <label for="lname" class="col-md-2 col-form-label">Last Name</label>
+                                    <div class="col-md-10">
+                                        <input type="text" id="lname" class="form-control"
+                                            placeholder="Enter your last name">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <small id="lnameMsg" class="form-text"></small>
+                                    </div>
+                                </div>
+
+                                <!-- Email Field -->
+                                <div class="row mb-3 align-items-center">
+                                    <label for="email" class="col-md-2 col-form-label">Email</label>
+                                    <div class="col-md-10">
+                                        <input type="email" id="email" class="form-control"
+                                            placeholder="Enter your email">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <small id="emailMsg" class="form-text"></small>
+                                    </div>
+                                </div>
+
+                                <!-- Phone Field -->
+                                <div class="row mb-3 align-items-center">
+                                    <label for="phone" class="col-md-2 col-form-label">Phone</label>
+                                    <div class="col-md-10">
+                                        <input type="tel" id="phone" class="form-control"
+                                            placeholder="Enter your phone number" required>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <small id="phoneMsg" class="form-text"></small>
+                                    </div>
+                                </div>
+
+                                <!-- Message Field -->
+                                <div class="row mb-2 align-items-center">
+                                    <label for="message" class="col-md-2 col-form-label">Message</label>
+                                    <div class="col-md-10">
+                                        <textarea id="message" class="form-control" rows="4"
+                                            placeholder="Write your message"></textarea>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <small id="messageMsg" class="form-text"></small>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <!-- Buttons -->
+                                <div class="row">
+                                    <div class="col-md-7 offset-md-2">
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="validateContactForm()">Submit</button>
+                                        <button type="reset" class="btn btn-secondary"
+                                            onclick="resetContactForm()">Reset</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <script src="formValidation.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center p-3 bg-dark text-white">
+        <p>© 2024 Harmony Wellness. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Implementation of tooltip with tooltip initialized throughout via script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                validateContactForm(event); // Pass the event object
+            });
+        });
+    </script>
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-button');
+
+            accordionItems.forEach(button => {
+                button.addEventListener('click', function () {
+                    setTimeout(() => {
+                        button.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

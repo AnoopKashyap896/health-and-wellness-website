@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3 column layout webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SIT774 Team">
+    <meta name="description" content="3 column design">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar sticky-top navbar-expand-lg bg-aqua navbar-light p-2">
+        <div class="container-fluid">
+            <div class="navbar-brand d-flex align-items-center col-3">
+                <a href="/">
+                    <img src="logo.JPG" alt="Logo" class="img-fluid" style="max-height: 80px; width: auto;">
+                </a>
+                <a class="navbar-brand ms-2" href="#"
+                    style="font-family: 'Lobster', cursive; font-size: 2.5rem; color: #153838;">
+                    Harmony Wellness
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex align-items-center">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="max-width: 400px;">
+                    <button class="btn btn-primary me-2" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="div-darker-background">
+        <div id="carouselWork" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselWork" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselWork" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselWork" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-item active carousel-image">
+                    <img src="excrcise.jpg" class="carousel-image" alt="EXERCISE IMAGE">
+                </div>
+                <div class="carousel-item carousel-image">
+                    <img src="yoga.png" class="carousel-image" alt="YOGA IMAGE">
+                </div>
+                <div class="carousel-item carousel-image">
+                    <img src="massage.jpg" class="carousel-image" alt="MASSAGE IMAGE">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselWork" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselWork" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <br>
+        <div>
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-3 text-dark p-3">
+                    <h2>Why Choose Us</h2>
+                    <ol class="list-unstyled">
+                        <li class="menu-item" data-hover-color="#ffc107">1. Expert Guidance: Our team comprises
+                            certified
+                            professionals with years of experience in health and wellness.</li>
+                        <li class="menu-item" data-hover-color="#17a2b8">2. Holistic Approach: We address physical,
+                            mental,
+                            and emotional well-being for a comprehensive transformation.</li>
+                        <li class="menu-item" data-hover-color="#28a745">3. Customized Solutions: Personalized plans
+                            tailored to meet your unique health goals and lifestyle.</li>
+                        <li class="menu-item" data-hover-color="#dc3545">4. Proven Results: Success stories and
+                            testimonials
+                            from clients who have achieved their wellness goals with us.</li>
+                        <li class="menu-item" data-hover-color="#6610f2">5. Cutting-Edge Techniques: Access to the
+                            latest
+                            tools, technology, and methodologies in health and wellness.</li>
+                        <li class="menu-item" data-hover-color="#bc777d">6. Supportive Community: Join a community that
+                            motivates and inspires you to stay on track.</li>
+                        <li class="menu-item" data-hover-color="#fd7e14">7. Sustainable Practices: Our strategies focus
+                            on
+                            long-term, sustainable health improvements.</li>
+                        <li class="menu-item" data-hover-color="#20c997">8. Accessible Anytime: Online resources, expert
+                            consultations, and tips are available 24/7.</li>
+                        <li class="menu-item" data-hover-color="#ffc107">9. Affordable Options: Quality care and
+                            services
+                            that suit a range of budgets.</li>
+                        <li class="menu-item" data-hover-color="#343a40">10. Commitment to Quality: We prioritize your
+                            well-being above all else and maintain high standards in everything we do.</li>
+                    </ol>
+                </div>
+
+                <div class="col-6 text-black p-4">
+                    <h2 class="text-center">Service Listings</h2>
+                    <br>
+                    <div class="container">
+                        <!-- First row of cards -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/goat-yoga.jpg" class="card-img-top" alt="Goat Yoga">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Goat Yoga</h5>
+                                        <p class="card-text">Experience yoga like never before! Goat yoga combines
+                                            traditional yoga poses with playful interactions with friendly goats.</p>
+                                        <button class="btn btn-secondary" onclick="openBookingForm('Goat Yoga')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/aerobics.jpg" class="card-img-top" alt="Aerobics">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aerobics</h5>
+                                        <p class="card-text">Boost your cardio fitness with our high-energy aerobics
+                                            classes, designed to get your heart pumping and your body moving.</p>
+                                        <button class="btn btn-secondary" onclick="openBookingForm('Aerobics')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second row of cards -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/pilates.jpg" class="card-img-top" alt="Pilates">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pilates</h5>
+                                        <p class="card-text">Strengthen your core and improve your posture with our
+                                            Pilates
+                                            sessions, suitable for all levels of fitness.</p>
+                                        <button class="btn btn-secondary" onclick="openBookingForm('Pilates')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/yoga.jpg" class="card-img-top" alt="Regular Yoga">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Traditional Yoga</h5>
+                                        <p class="card-text">Find balance, flexibility, and strength with our regular
+                                            yoga
+                                            classes, led by experienced instructors.</p>
+                                        <button class="btn btn-secondary" onclick="openBookingForm('Regular Yoga')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third row of cards -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/hot-yoga.jpg" class="card-img-top" alt="Hot Yoga">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hot Yoga</h5>
+                                        <p class="card-text">Challenge yourself in a heated room to enhance flexibility
+                                            and
+                                            detoxify your body through hot yoga.</p>
+                                        <button class="btn btn-secondary" onclick="openBookingForm('Hot Yoga')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/power-yoga.png" class="card-img-top" alt="Power Yoga">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Power Yoga</h5>
+                                        <p class="card-text">A more intense yoga style focused on strength and stamina,
+                                            perfect for those who want a full-body workout.</p>
+                                        <button class="btn btn-secondary" onclick="openBookingForm('Power Yoga')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fourth row of cards -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/aerial-yoga.jpg" class="card-img-top" alt="Aerial Yoga">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aerial Yoga</h5>
+                                        <p class="card-text">Defy gravity with aerial yoga! Using a hammock, experience
+                                            poses that enhance flexibility and relieve tension.</p>
+                                        <button class="btn btn-secondary" onclick="openBookingForm('Aerial Yoga')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <img src="images/prenatal-yoga.jpg" class="card-img-top" alt="Prenatal Yoga">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Prenatal Yoga</h5>
+                                        <p class="card-text">Specially designed for expecting mothers, our prenatal yoga
+                                            classes promote relaxation and prepare the body for childbirth.</p>
+                                        <button class="btn btn-secondary"
+                                            onclick="openBookingForm('Prenatal Yoga')">Book
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="bookingModalLabel">Book Your Class</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Booking Form -->
+                                <form id="bookingForm" onsubmit="validateBookingForm(event)">
+                                    <!-- First Name Field -->
+                                    <div class="row mb-3 align-items-center">
+                                        <label for="fname" class="col-md-2 col-form-label">First Name</label>
+                                        <div class="col-md-10">
+                                            <input type="text" id="fname" class="form-control"
+                                                placeholder="Enter your first name">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <small id="fnameMsg" class="form-text"></small>
+                                        </div>
+                                    </div>
+
+                                    <!-- Last Name Field -->
+                                    <div class="row mb-3 align-items-center">
+                                        <label for="lname" class="col-md-2 col-form-label">Last Name</label>
+                                        <div class="col-md-10">
+                                            <input type="text" id="lname" class="form-control"
+                                                placeholder="Enter your last name">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <small id="lnameMsg" class="form-text"></small>
+                                        </div>
+                                    </div>
+
+                                    <!-- Age Field -->
+                                    <div class="row mb-3 align-items-center">
+                                        <label for="age" class="col-md-2 col-form-label">Age</label>
+                                        <div class="col-md-10">
+                                            <input type="number" id="age" class="form-control"
+                                                placeholder="Enter your Age">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <small id="ageMsg" class="form-text"></small>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email Field -->
+                                    <div class="row mb-3 align-items-center">
+                                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                                        <div class="col-md-10">
+                                            <input type="email" id="email" class="form-control"
+                                                placeholder="Enter your email">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <small id="emailMsg" class="form-text"></small>
+                                        </div>
+                                    </div>
+                                    <!-- Activity Field -->
+                                    <div class="row mb-3 align-items-center">
+                                        <label for="activityInput" class="col-md-2 col-form-label">Activity</label>
+                                        <div class="col-md-10">
+                                            <input type="text" id="activityInput" name="activity" value="Yoga" readonly>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comment Field -->
+                                    <div class="row mb-2 align-items-center">
+                                        <label for="comment" class="col-md-2 col-form-label">Comment</label>
+                                        <div class="col-md-10">
+                                            <textarea id="comment" class="form-control" rows="4"
+                                                placeholder="Write your Comments (Optional)"></textarea>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <small id="commentMsg" class="form-text"></small>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <!-- Buttons -->
+                                    <div class="row">
+                                        <div class="col-md-7 offset-md-2">
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="validateBookingForm(event)">Submit</button>
+                                            <button type="reset" class="btn btn-secondary"
+                                                onclick="resetBookingForm()">Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column 3 -->
+                <div class="col-md-3 div1-darker-background text-black p-3">
+                    <h3>Testimonials</h3>
+                    <div id="testimonialCarousel" class="testimonial-carousel">
+                        <div class="testimonial-group">
+                            <div class="testimonial-item">
+                                <p>"The yoga sessions were transformative. Highly recommend!"</p>
+                                <small>- Sarah J.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"Meditation helped me achieve mental clarity and focus."</p>
+                                <small>- John D.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"The personalized plans are exactly what I needed to reach my goals."</p>
+                                <small>- Emma W.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"The instructors are knowledgeable and supportive!"</p>
+                                <small>- Alex P.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"I love the sense of community. It's very motivating."</p>
+                                <small>- Priya K.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"The nutrition guidance has made a huge difference in my life."</p>
+                                <small>- Liam T.</small>
+                            </div>
+                        </div>
+                        <div class="testimonial-group">
+                            <div class="testimonial-item">
+                                <p>"I feel healthier and happier thanks to these programs."</p>
+                                <small>- Mia V.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"The flexibility and support are unmatched. Thank you!"</p>
+                                <small>- Noah B.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"Amazing services with real results. I recommend them to everyone."</p>
+                                <small>- Sophia R.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"The instructors are knowledgeable and supportive!"</p>
+                                <small>- Alex P.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"I love the sense of community. It's very motivating."</p>
+                                <small>- Priya K.</small>
+                            </div>
+                            <div class="testimonial-item">
+                                <p>"The nutrition guidance has made a huge difference in my life."</p>
+                                <small>- Liam T.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table to display bookings -->
+                <div id="bookingsContainer">
+                    <button id="viewBookingsBtn" class="btn btn-info" onclick="fetchBookings()">View Bookings</button>
+                    <div id="bookingsTable"></div> <!-- Table will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="text-center p-3 bg-dark text-white">
+        <p>© 2024 Harmony Wellness. All rights reserved.</p>
+    </footer>
+    <script src="bookingFormValidation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Implementation of tooltip with tooltip initialized throughout via script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            menuItems.forEach(item => {
+                const hoverColor = item.getAttribute('data-hover-color');
+
+                // Apply dynamic hover effect
+                item.addEventListener('mouseover', function () {
+                    item.style.backgroundColor = hoverColor; // Set background color on hover
+                    item.style.color = '#fff'; // Set text color to white
+                });
+
+                item.addEventListener('mouseout', function () {
+                    item.style.backgroundColor = ''; // Reset background color
+                    item.style.color = ''; // Reset text color
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const groups = document.querySelectorAll('.testimonial-group');
+            let activeIndex = 0;
+
+            // Function to update the active testimonial group
+            const updateCarousel = () => {
+                // Hide all groups
+                groups.forEach(group => group.classList.remove('active'));
+                // Show the current active group
+                groups[activeIndex].classList.add('active');
+                // Move to the next group 
+                activeIndex = (activeIndex + 1) % groups.length;
+            };
+
+            // Initial display
+            updateCarousel();
+
+            //  interval for the carousel (5 seconds)
+            setInterval(updateCarousel, 5000);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'), {
+                backdrop: 'static', // Prevent closing the modal by clicking outside
+            });
+
+            // Open the booking modal with dynamic class name
+            window.openBookingForm = function (className) {
+                document.getElementById('bookingModalLabel').textContent = `Book Your Class: ${className}`;
+                const activityInput = document.getElementById("activityInput");
+                activityInput.value = className;  // Set the class name here
+                bookingModal.show();
+
+            };
+
+            // Handle form submission
+            const bookingForm = document.getElementById('bookingForm');
+            bookingForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Collect form data
+                const formData = new FormData(bookingForm);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+
+                console.log('Booking Data:', data);
+
+                // Clear the form and close the modal
+                bookingForm.reset();
+                bookingModal.hide();
+
+                // Show a success message
+                alert('Thank you for booking! We will contact you shortly.');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
