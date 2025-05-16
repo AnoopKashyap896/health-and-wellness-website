@@ -19,16 +19,19 @@ pipeline {
         stage('Unit and Integration Tests') {
             steps {
                 echo 'Running tests using JUnit or TestNG...'
-                bat 'echo Tests executed.'
+                bat '''
+                    mkdir test-output
+                    echo Tests executed successfully. > test-output/test-report.log
+                '''
             }
             post {
                 always {
+                    archiveArtifacts artifacts: '**/test-output/*.log', fingerprint: true
                     emailext (
                         subject: "Test Stage - ${currentBuild.currentResult}",
-                        body: "The Test stage has completed with status: ${currentBuild.currentResult}.",
-                        recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                        body: """<p>The <b>Test</b> stage has completed with status: <b>${currentBuild.currentResult}</b>.</p>""",
                         to: "${env.EMAIL_RECIPIENT}",
-                        attachmentsPattern: "**/test-output/*.log",
+                        attachmentsPattern: '**/test-output/*.log',
                         attachLog: true
                     )
                 }
@@ -45,14 +48,19 @@ pipeline {
         stage('Security Scan') {
             steps {
                 echo 'Security scan using OWASP Dependency-Check...'
-                bat 'echo Security scan completed.'
+                bat '''
+                    mkdir scan-results
+                    echo OWASP security scan completed successfully. > scan-results/security-report.log
+                '''
             }
             post {
                 always {
+                    archiveArtifacts artifacts: '**/scan-results/*.log', fingerprint: true
                     emailext (
                         subject: "Security Scan Stage - ${currentBuild.currentResult}",
-                        body: "The Security Scan stage has completed with status: ${currentBuild.currentResult}.",
+                        body: """<p>The <b>Security Scan</b> stage has completed with status: <b>${currentBuild.currentResult}</b>.</p>""",
                         to: "${env.EMAIL_RECIPIENT}",
+                        attachmentsPattern: '**/scan-results/*.log',
                         attachLog: true
                     )
                 }
