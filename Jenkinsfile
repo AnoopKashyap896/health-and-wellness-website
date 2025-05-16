@@ -9,6 +9,11 @@ pipeline {
     }
 
     stages {
+        stage('Prepare Output Directory') {
+    steps {
+        bat 'mkdir test-output || exit /b 0'
+             }
+        }
         stage('Build') {
             steps {
                 echo "Building the project..."
