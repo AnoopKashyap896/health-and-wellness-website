@@ -6,7 +6,7 @@ pipeline {
         STAGING_ENV = "staging"
         PROD_ENV = "production"
         EMAIL_RECIPIENT = "anoopkashyapp16@gmail.com"
-        EMAIL_SENDER = "jenkins@yourdomain.com"   // Add your actual sender email here
+        EMAIL_SENDER = "jenkins@yourdomain.com"   // Update as needed
     }
 
     stages {
@@ -34,13 +34,11 @@ pipeline {
                     emailext (
                         from: "${env.EMAIL_SENDER}",
                         subject: "Test Stage - ${currentBuild.currentResult}",
-                        body: """
-                            <p>The <b>Test stage</b> has completed with status: <b>${currentBuild.currentResult}</b>.</p>
-                            <p>Project: ${env.PROJECT_NAME}</p>
-                        """,
+                        body: "The Test stage has completed with status: ${currentBuild.currentResult}.\nProject: ${env.PROJECT_NAME}",
                         to: "${env.EMAIL_RECIPIENT}",
                         attachmentsPattern: "**/test-output/*.log",
-                        attachLog: true
+                        attachLog: true,
+                        mimeType: 'text/plain'
                     )
                 }
             }
@@ -69,13 +67,11 @@ pipeline {
                     emailext (
                         from: "${env.EMAIL_SENDER}",
                         subject: "Security Scan Stage - ${currentBuild.currentResult}",
-                        body: """
-                            <p>The <b>Security Scan</b> stage has completed with status: <b>${currentBuild.currentResult}</b>.</p>
-                            <p>Project: ${env.PROJECT_NAME}</p>
-                        """,
+                        body: "The Security Scan stage has completed with status: ${currentBuild.currentResult}.\nProject: ${env.PROJECT_NAME}",
                         to: "${env.EMAIL_RECIPIENT}",
                         attachmentsPattern: "**/scan-results/*.log",
-                        attachLog: true
+                        attachLog: true,
+                        mimeType: 'text/plain'
                     )
                 }
             }
@@ -105,28 +101,14 @@ pipeline {
     }
 
     post {
-        failure {
-            emailext (
-                from: "${env.EMAIL_SENDER}",
-                subject: "Pipeline FAILED - ${currentBuild.fullDisplayName}",
-                body: """
-                    <p>The Jenkins pipeline for <b>${env.PROJECT_NAME}</b> has <b>FAILED</b>.</p>
-                    <p>Please check the console output and logs for details.</p>
-                """,
-                to: "${env.EMAIL_RECIPIENT}",
-                attachLog: true
-            )
-        }
         always {
             emailext (
                 from: "${env.EMAIL_SENDER}",
                 subject: "Pipeline Completed - ${currentBuild.currentResult}",
-                body: """
-                    <p>The Jenkins pipeline for <b>${env.PROJECT_NAME}</b> has completed with status: <b>${currentBuild.currentResult}</b>.</p>
-                    <p>Check the attached build log for more details.</p>
-                """,
+                body: "The Jenkins pipeline for ${env.PROJECT_NAME} has completed with status: ${currentBuild.currentResult}.\nCheck the attached build log for more details.",
                 to: "${env.EMAIL_RECIPIENT}",
-                attachLog: true
+                attachLog: true,
+                mimeType: 'text/plain'
             )
         }
     }
