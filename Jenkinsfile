@@ -6,7 +6,7 @@ pipeline {
         STAGING_ENV = "staging"
         PROD_ENV = "production"
         EMAIL_RECIPIENT = "anoopkashyapp16@gmail.com"
-        EMAIL_SENDER = "jenkins@yourdomain.com"   // Update as needed
+        EMAIL_SENDER = "company@yourdomain.com"  
     }
 
     stages {
@@ -62,19 +62,19 @@ pipeline {
                     echo Simulated OWASP Dependency Scan > scan-results/security-report.log
                 """
             }
-            post {
-                always {
-                    emailext (
-                        from: "${env.EMAIL_SENDER}",
-                        subject: "Security Scan Stage - ${currentBuild.currentResult}",
-                        body: "The Security Scan stage has completed with status: ${currentBuild.currentResult}.\nProject: ${env.PROJECT_NAME}",
-                        to: "${env.EMAIL_RECIPIENT}",
-                        attachmentsPattern: "**/scan-results/*.log",
-                        attachLog: true,
-                        mimeType: 'text/plain'
-                    )
-                }
-            }
+            // post {
+            //     always {
+            //         emailext (
+            //             from: "${env.EMAIL_SENDER}",
+            //             subject: "Security Scan Stage - ${currentBuild.currentResult}",
+            //             body: "The Security Scan stage has completed with status: ${currentBuild.currentResult}.\nProject: ${env.PROJECT_NAME}",
+            //             to: "${env.EMAIL_RECIPIENT}",
+            //             attachmentsPattern: "**/scan-results/*.log",
+            //             attachLog: true,
+            //             mimeType: 'text/plain'
+            //         )
+            //     }
+            // }
         }
 
         stage('Deploy to Staging') {
