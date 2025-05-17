@@ -27,6 +27,9 @@ pipeline {
             steps {
                 echo 'Listing files in test-output...'
                 bat 'dir test-output'
+                // Add explicit file verification
+                bat 'type test-output\\build.log'
+                bat 'type test-output\\test.log'
             }
         }
     }
@@ -35,10 +38,14 @@ pipeline {
         always {
             emailext (
                 subject: "Build Status: ${currentBuild.currentResult}",
-                body: "Hi Team,\n\nThe Jenkins pipeline has completed with status: ${currentBuild.currentResult}.\n\nPlease find the attached logs.\n\nRegards,\nJenkins",
+                body: """<p>Hi Team,</p>
+                        <p>Jenkins pipeline completed with status: <b>${currentBuild.currentResult}</b>.</p>
+                        <p>See attached logs.</p>
+                        <p>Regards,<br>Jenkins</p>""",
                 to: "${env.EMAIL_RECIPIENT}",
-                attachmentsPattern: 'test-output/*.log',
-                attachLog: true
+                attachmentsPattern: 'test-output/**/*.log',
+                attachLog: true,
+                mimeType: 'text/html'
             )
         }
     }
