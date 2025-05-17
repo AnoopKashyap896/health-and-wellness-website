@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Running tests using JUnit or TestNG...'
                 bat """
-                    mkdir test-output
+                    if not exist test-output mkdir test-output
                     echo Test results for Unit and Integration Tests > test-output/test-report.log
                     echo All unit tests passed successfully. > test-output/test.log
                 """
@@ -58,23 +58,23 @@ pipeline {
             steps {
                 echo 'Security scan using OWASP Dependency-Check...'
                 bat """
-                    mkdir scan-results
+                    if not exist scan-results mkdir scan-results
                     echo Simulated OWASP Dependency Scan > scan-results/security-report.log
                 """
             }
-            // post {
-            //     always {
-            //         emailext (
-            //             from: "${env.EMAIL_SENDER}",
-            //             subject: "Security Scan Stage - ${currentBuild.currentResult}",
-            //             body: "The Security Scan stage has completed with status: ${currentBuild.currentResult}.\nProject: ${env.PROJECT_NAME}",
-            //             to: "${env.EMAIL_RECIPIENT}",
-            //             attachmentsPattern: "**/scan-results/*.log",
-            //             attachLog: true,
-            //             mimeType: 'text/plain'
-            //         )
-            //     }
-            // }
+            post {
+                always {
+                    emailext (
+                        from: "${env.EMAIL_SENDER}",
+                        subject: "Security Scan Stage - ${currentBuild.currentResult}",
+                        body: "The Security Scan stage has completed with status: ${currentBuild.currentResult}.\nProject: ${env.PROJECT_NAME}",
+                        to: "${env.EMAIL_RECIPIENT}",
+                        attachmentsPattern: "**/scan-results/*.log",
+                        attachLog: true,
+                        mimeType: 'text/plain'
+                    )
+                }
+            }
         }
 
         stage('Deploy to Staging') {
